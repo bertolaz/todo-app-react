@@ -1,5 +1,4 @@
 const express = require("express");
-const ToDo = require("../models/toDo");
 const User = require('../models/users');
 const mongoose = require("mongoose");
 
