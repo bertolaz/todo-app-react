@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const path = require('path');
 const toDosRouter = require('./routes/todos');
 const userRouter = require('./routes/users');
+const cors = require('cors');
 
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = process.env.DB_PASSWORD;
@@ -28,6 +29,7 @@ catch(e) {
 
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
